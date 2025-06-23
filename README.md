@@ -19,13 +19,13 @@ A full-stack web application to **showcase, upload, like, and explore digital ar
 
 ## 🛠️ Tech Stack
 
-| Layer    | Tech Used                   |
-| -------- | --------------------------- |
-| Frontend | HTML, CSS (Bootstrap 5), JS |
-| Backend  | PHP (Core PHP)              |
-| Database | MySQL (phpMyAdmin)          |
-| UI/UX    | Bootstrap Cards & Icons     |
-| Hosting  | XAMPP / Localhost           |
+| Layer    | Tech Used               |
+| -------- | ----------------------- |
+| Frontend | HTML, CSS (Bootstrap 5) |
+| Backend  | PHP (Core PHP)          |
+| Database | MySQL (phpMyAdmin)      |
+| UI/UX    | Bootstrap Cards & Icons |
+| Hosting  | XAMPP / Localhost       |
 
 ---
 
