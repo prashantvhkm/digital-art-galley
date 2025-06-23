@@ -1,6 +1,6 @@
 # 🎨 Digital Art Gallery
 
-A full-stack web application to **showcase, upload, like, and explore digital artwork**. Built using **PHP**, **MySQL**, **Bootstrap**, and **JavaScript**, this platform allows users to share their creativity and connect with others in the digital art space.
+A full-stack web application to **showcase, upload, like, and explore digital artwork**. Built using **PHP**, **MySQL**, **Bootstrap**, this platform allows users to share their creativity and connect with others in the digital art space.
 
 ---
 
