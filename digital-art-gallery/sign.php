@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
             // Insert user into DB
-            $sql = $con->prepare("INSERT INTO users (fullname, email, username, password) VALUES (?, ?, ?, ?)");
+            $sql = $con->prepare("call signUser(?,?,?,?)");
             $sql->bind_param("ssss", $fullname, $email, $username, $hashed_password);
 
             if ($sql->execute()) {

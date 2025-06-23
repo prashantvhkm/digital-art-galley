@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST["username"]);
 
     // Update query
-    $update = $con->prepare("UPDATE users SET fullname = ?, email = ?, username = ? WHERE id = ?");
+    $update = $con->prepare("call profileUser(?,?,?,?)");
     $update->bind_param("sssi", $fullname, $email, $username, $user_id);
     $update->execute();
 

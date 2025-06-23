@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         echo "<script>alert('Passwords do not match.'); window.history.back();</script>";
     } else {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-        $sql = $con->prepare("UPDATE users SET password=? WHERE username=?");
+        $sql = $con->prepare("call forgotPassword(?,?)");
         $sql->bind_param("ss", $hashed_password, $username);
 
         if ($sql->execute()) {

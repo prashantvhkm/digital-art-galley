@@ -11,6 +11,7 @@ A full-stack web application to **showcase, upload, like, and explore digital ar
 - 🔐 Session-based access to the dashboard
 - 📅 Timestamped uploads
 - 📷 Image preview and responsive card design
+- 📁 Organized database using MySQL procedures
 
 ---
 
@@ -20,9 +21,20 @@ A full-stack web application to **showcase, upload, like, and explore digital ar
 | -------- | --------------------------- |
 | Frontend | HTML, CSS (Bootstrap 5), JS |
 | Backend  | PHP (Core PHP)              |
-| Database | MySQL                       |
+| Database | MySQL (phpMyAdmin)          |
 | UI/UX    | Bootstrap Cards & Icons     |
 | Hosting  | XAMPP / Localhost           |
+
+---
+
+## 📁 SQL Procedures Used
+
+- addUpload – Inserts new artwork into the gallery.
+- editupload – Updates existing artwork details (title, description, image).
+- deleteArt – Deletes a specific artwork by ID and user ID.
+- signUser – Registers a new user account.
+- profileUser – Updates user profile (fullname, email, username).
+- forgotPassword – Resets user password using the username.
 
 ---
 
@@ -61,7 +73,7 @@ A full-stack web application to **showcase, upload, like, and explore digital ar
 ![alt text](image-1.png)
 ![alt text](image-3.png)
 
-## 🙏 Credits
+## 🙌 Credits
 
 Created by **Prashant Vishwakarma**  
 📧 [prashantvhkm@gmail.com](mailto:prashantvhkm@gmail.com)  

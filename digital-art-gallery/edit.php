@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
         $img=$_FILES["img"]["name"];
         move_uploaded_file($_FILES["img"]["tmp_name"], "img/$img");
      }
-     $sql=$con->prepare("update addupload set title=?,description=?,img=? where id=? and user_id=?");
+     $sql=$con->prepare("call editupload(?,?,?,?,?)");
      $sql->bind_param("sssii", $title, $description,$img, $id,$user_id);
      $sql->execute();
      header("location:dashboard.php");

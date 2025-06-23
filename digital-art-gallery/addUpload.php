@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"]==="POST"){
     $img=$_FILES["img"]["name"];
     move_uploaded_file($_FILES["img"]["tmp_name"],"img/$img");
 
-    $sql=$con->prepare("insert into addupload(user_id,title,description,img) values(?,?,?,?);");
+    $sql=$con->prepare("call addUpload(?,?,?,?)");
     $sql->bind_param("isss", $id, $title, $description, $img);
     $sql->execute();
     header("location:dashboard.php");

@@ -13,7 +13,7 @@ $result->bind_param("ii",$id,$user_id);
 $result->execute();
 $data=$result->get_result()->fetch_assoc();
 
-$sql=$con->prepare("delete from addupload where id=? and user_id=?");
+$sql=$con->prepare("call deleteArt(?,?)");
 $sql->bind_param("ii", $id,$user_id);
 $sql->execute();
 header("location:dashboard.php");
