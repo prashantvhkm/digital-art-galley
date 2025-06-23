@@ -26,10 +26,6 @@ A full-stack web application to **showcase, upload, like, and explore digital ar
 
 ---
 
-## 🗂️ Project Structure
-
----
-
 ## 🚀 Setup Instructions
 
 1. **Clone the repository**
