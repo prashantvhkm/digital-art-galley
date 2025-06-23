@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2025 at 06:14 PM
+-- Generation Time: Jun 23, 2025 at 06:44 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -78,6 +78,31 @@ INSERT INTO `addupload` (`id`, `user_id`, `title`, `description`, `img`, `create
 (12, 2, 'img1', 'description2', 'v1.jpg', '2025-06-23 03:25:15'),
 (13, 3, 'new', 'hey', 'dip1.jpeg', '2025-06-23 15:56:19');
 
+--
+-- Triggers `addupload`
+--
+DELIMITER $$
+CREATE TRIGGER `after_upload_insert` AFTER INSERT ON `addupload` FOR EACH ROW BEGIN
+    INSERT INTO upload_log (upload_id, user_id, action)
+    VALUES (NEW.id, NEW.user_id, 'Artwork Uploaded');
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `upload_log`
+--
+
+CREATE TABLE `upload_log` (
+  `log_id` int(11) NOT NULL,
+  `upload_id` int(11) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `action` varchar(100) DEFAULT NULL,
+  `log_time` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 -- --------------------------------------------------------
 
 --
@@ -115,6 +140,12 @@ ALTER TABLE `addupload`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `upload_log`
+--
+ALTER TABLE `upload_log`
+  ADD PRIMARY KEY (`log_id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -131,6 +162,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `addupload`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `upload_log`
+--
+ALTER TABLE `upload_log`
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
