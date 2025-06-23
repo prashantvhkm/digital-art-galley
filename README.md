@@ -6,12 +6,14 @@ A full-stack web application to **showcase, upload, like, and explore digital ar
 
 ## 🖼️ Features
 
-- ✅ User registration and login
-- 🖌️ Artwork upload with title & description
-- 🔐 Session-based access to the dashboard
-- 📅 Timestamped uploads
-- 📷 Image preview and responsive card design
-- 📁 Organized database using MySQL procedures
+- ✅ **User registration and login**
+- 🖌️ **Upload artworks** with title and description
+- 🔐 **Session-based dashboard access**
+- 📅 **Timestamped artwork uploads**
+- 📷 **Responsive gallery** with image previews using Bootstrap cards
+- 📁 **MySQL stored procedures** for efficient data operations
+- 🧩 **MySQL trigger** logs every artwork upload
+- ✔️ **Form validation** to ensure clean and secure data entry
 
 ---
 
